@@ -1,15 +1,20 @@
 export enum TaskState {
-    ACTIVE = 0,
-    COMPLETE = 1,
+    Todo = 0,
+    InProgress = 1,
+    Done = 2
 }
 
 export class Task {
     state: TaskState;
     constructor(public id: number, public title: string, public description: string ){
-        this.state = TaskState.ACTIVE;
+        this.state = TaskState.Todo;
+    }
+
+    start(): void{
+        this.state = TaskState.InProgress
     }
 
     complete(): void{
-        this.state = TaskState.COMPLETE;
+        this.state = TaskState.Done;
     }
 }

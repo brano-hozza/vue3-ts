@@ -18,7 +18,7 @@
 
 <template>
   <div>
-    <h1>Moje tasky</h1>
+    <h1 class="text-3xl font-bold underline">Moje tasky</h1>
     <div v-for="task of tasks">
       <TaskComponent :key="task.id" :task="task" />
     </div>
